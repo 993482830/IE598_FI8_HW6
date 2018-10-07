@@ -14,6 +14,7 @@ iris = datasets.load_iris()
 X = iris.data[:, [2, 3]]
 y = iris.target
 
+#Part 1
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
@@ -51,3 +52,19 @@ print("\n")
 print("mean of test accuracy score:\n{} ".format(np.mean(test_scores)))
 print("\n")
 print("std of test accuracy score:\n{}".format(np.std(test_scores)))
+print("\n")
+
+#Part 2
+from sklearn.model_selection import cross_val_score
+scores = cross_val_score(estimator=tree,
+                             X=X_train,
+                             y=y_train,
+                             cv=10,
+                            n_jobs=1)
+print('CV accuracy scores: %s' % scores)
+print("\n")
+print('CV accuracy: %.3f +/- %.3f' % (np.mean(scores),
+          np.std(scores)))
+print("My name is RENJIE HU")
+print("My NetID is: 659740767")
+print("I hereby certify that I have read the University policy on Academic Integrity and that I am not in violation.")
