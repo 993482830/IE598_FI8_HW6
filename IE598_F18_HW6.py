@@ -23,7 +23,7 @@ train_scores=[]
 test_scores=[]
 a=range(1,11)
 for i in a:
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, 
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, 
                                                         random_state=i, 
                                                         stratify=y)
     sc = StandardScaler()
